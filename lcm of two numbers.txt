@@ -1,0 +1,28 @@
+/*
+LCM Of Two Numbers Program
+*/
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main(){
+	int a,b,temp,lcm,gcd;
+	cout<<"Enter a,b"<<endl;
+	cin>>a>>b;
+
+	temp=a%b;
+	int val=a;
+	int var=b;
+	while(temp>=0){
+		if(temp==0){
+			cout<<"Highest common factor is: "<<b;
+			break;
+		}
+		a=b;
+		b=temp;
+		temp=a%b;
+	}
+	cout<<endl;
+	lcm=(val*var)/b;
+	cout<<"The least common factor is: "<<lcm;
+}
